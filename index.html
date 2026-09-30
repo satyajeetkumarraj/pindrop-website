@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PinDrop – Pinterest Downloader</title>
+
+    <meta
+        name="description"
+        content="PinDrop is a simple Pinterest downloader for saving publicly available Pinterest images and videos."
+    >
+
+    <meta
+        name="keywords"
+        content="Pinterest downloader, Pinterest video downloader, Pinterest image downloader, download Pinterest videos, PinDrop"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta name="author" content="Orvylix Labs">
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="PinDrop – Pinterest Downloader"
+    >
+
+    <meta
+        property="og:description"
+        content="Download publicly available Pinterest images and videos quickly with PinDrop."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="PinDrop"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                href="#"
+                class="brand"
+            >
+
+                <div class="brand-icon">
+                    ↓
+                </div>
+
+                <span>
+                    PinDrop
+                </span>
+
+            </a>
+
+
+            <nav>
+
+                <a href="#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+
+                <div class="badge">
+                    Pinterest Media Downloader
+                </div>
+
+
+                <h1>
+
+                    Download Pinterest
+                    <br>
+
+                    <span>
+                        images & videos.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Paste a Pinterest link and download
+                    available images or videos quickly
+                    and easily.
+
+                </p>
+
+
+
+                <!-- DOWNLOADER -->
+
+                <div class="downloader-card">
+
+
+                    <div class="input-wrapper">
+
+                        <input
+                            type="url"
+                            id="urlInput"
+                            placeholder="Paste Pinterest URL here..."
+                            autocomplete="off"
+                        >
+
+
+                        <button
+                            id="pasteButton"
+                            class="paste-button"
+                        >
+
+                            Paste
+
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        id="getMediaButton"
+                        class="primary-button"
+                    >
+
+                        Get Media
+
+                    </button>
+
+
+                    <div
+                        id="status"
+                        class="status"
+                    ></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RESULT
+        ========================== -->
+
+        <section
+            id="resultSection"
+            class="result-section hidden"
+        >
+
+            <div class="result-card">
+
+
+                <div
+                    id="previewContainer"
+                    class="preview-container hidden"
+                >
+
+                    <img
+                        id="imagePreview"
+                        class="media-preview hidden"
+                        alt="Pinterest preview"
+                    >
+
+                    <video
+                        id="videoPreview"
+                        class="media-preview hidden"
+                        controls
+                        playsinline
+                    ></video>
+
+                </div>
+
+
+
+                <div class="result-content">
+
+
+                    <div class="result-badge">
+                        MEDIA READY
+                    </div>
+
+
+                    <h2>
+                        Your media is ready
+                    </h2>
+
+
+                    <p id="mediaType"></p>
+
+
+
+                    <!-- QUALITY -->
+
+                    <div
+                        id="qualityContainer"
+                        class="quality-container hidden"
+                    >
+
+                        <label for="qualitySelect">
+                            Video Quality
+                        </label>
+
+                        <select id="qualitySelect">
+                        </select>
+
+                    </div>
+
+
+
+                    <button
+                        id="downloadButton"
+                        class="primary-button"
+                    >
+
+                        Download
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             HOW IT WORKS
+        ========================== -->
+
+        <section
+            id="how-it-works"
+            class="info-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    SIMPLE PROCESS
+                </span>
+
+                <h2>
+                    How it works
+                </h2>
+
+            </div>
+
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Copy the link
+                    </h3>
+
+                    <p>
+                        Copy the Pinterest URL of the
+                        image or video you want to save.
+                    </p>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Paste it
+                    </h3>
+
+                    <p>
+                        Paste the Pinterest link into
+                        the PinDrop downloader.
+                    </p>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Download
+                    </h3>
+
+                    <p>
+                        Choose your preferred quality
+                        and download the media.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            id="about"
+            class="about-section"
+        >
+
+            <div class="about-content">
+
+                <span class="section-label">
+                    ABOUT PINDROP
+                </span>
+
+
+                <h2>
+                    Simple. Fast. Easy to use.
+                </h2>
+
+
+                <p>
+
+                    PinDrop provides a simple interface
+                    for accessing publicly available
+                    Pinterest media through a convenient
+                    web experience.
+
+                </p>
+
+
+                <p class="legal-note">
+
+                    Please download and use only content
+                    that you are authorized to access,
+                    save, and use.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <strong>
+                    PinDrop
+                </strong>
+
+                <span>
+                    by Orvylix Labs
+                </span>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="privacy.html">
+                    Privacy
+                </a>
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
